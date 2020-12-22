@@ -5,8 +5,8 @@ import (
 )
 
 func Fuzz(data []byte) int {
-	var stuff []byte
+	var stuff []string
 	jsoniter.Unmarshal(data, &stuff)
-	jsoniter.Marshal(&data)
+	jsoniter.Marshal(&stuff)
 	return 0
 }
